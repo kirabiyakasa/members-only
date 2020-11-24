@@ -14,8 +14,3 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-setTimeout(() => {
-  const elem = document.querySelector(".notice");
-  elem.parentNode.removeChild(elem);
-}, 7000);
