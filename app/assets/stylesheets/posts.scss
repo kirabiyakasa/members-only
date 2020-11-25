@@ -44,7 +44,7 @@ body {
 }
 
 .text-area {
-font-size: 18px;
+ font-size: 18px;
  resize: none;
  min-width: 375px;
  min-height: 200px;
@@ -110,6 +110,7 @@ font-size: 18px;
  max-width: 600px;
  min-height: 175px;
  border-radius: 10px;
+ background-color: rgba(38, 65, 65, 0.9);
  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -134,19 +135,23 @@ font-size: 18px;
  text-align: left;
  color: white;
  padding: 10px;
- background-color: rgba(38, 65, 65, 0.9);
  min-height: 175px;
+}
+
+.delete-button-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .delete-button {
   font-family: sans-serif;
   display: block;
   text-decoration: none;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  text-align: right;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  width: 40px;
+  align-self: flex-end;
   color: rgba(255, 0, 0, 0.918);
-  background-color: rgba(38, 65, 65, 0.9);
 }
 
 .delete-button:hover {

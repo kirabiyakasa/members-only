@@ -33,9 +33,11 @@
         <%= post.body %>
       </div>
       <% if owner?(post) %>
-        <b><%= link_to 'Delete', post_path(post), method: 'delete',
-        class: "delete-button",
-        data: { confirm: "Are you sure you want to delete this post?" } %></b>
+        <div class="delete-button-container">
+          <b><%= link_to 'Delete', post_path(post), method: 'delete',
+          class: "delete-button",
+          data: { confirm: "Are you sure you want to delete this post?" } %></b>
+        </div>
       <% end %>
     </div>
   <% end %>
