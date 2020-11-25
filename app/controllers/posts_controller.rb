@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def new
     @post = current_user.posts.build
@@ -23,6 +23,16 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC")
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    respond_to do |format|
+      format.html { redirect_to posts_path, 
+      notice: 'Post was successfully deleted.' }
+    end
   end
 
   private
